@@ -69,6 +69,10 @@
   .tools button { min-height: 52px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 16px; background: rgba(34,54,62,.92); border: 1px solid var(--line); font: 800 14px/1.2 var(--body); }
   .tools svg { width: 20px; height: 20px; fill: none; stroke: var(--yellow); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
   footer { text-align: center; padding: 28px 0 calc(34px + env(safe-area-inset-bottom)); color: var(--muted); font-size: 13px; }
+  footer p { color: var(--muted); font-size: 13px; }
+  .credit { display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; direction: ltr; opacity: .75; text-decoration: none; }
+  .credit span { font: 600 10px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .credit img { height: 14px; width: auto; }
   .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; background: var(--yellow); color: #1B2C33; font-weight: 800; padding: 10px 18px; border-radius: 999px; transition: .3s; pointer-events: none; }
   .toast.on { opacity: 1; transform: translate(-50%, 0); }
   @media (prefers-reduced-motion: reduce) { .link, .toast { transition: none; } }
@@ -137,7 +141,10 @@
     <button type="button" id="share"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span data-i="share">Partager</span></button>
   </div>
 
-  <footer data-i="foot">© 2026 Zenata Voyages · Oran, depuis 1984</footer>
+  <footer>
+    <p data-i="foot">© 2026 Zenata Voyages · Oran, depuis 1984</p>
+    <a class="credit" href="https://oranova-agency.com/" target="_blank" rel="noopener" aria-label="Designed by Oranova"><span>Designed by</span><img src="img/oranova.svg" alt="Oranova"></a>
+  </footer>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
